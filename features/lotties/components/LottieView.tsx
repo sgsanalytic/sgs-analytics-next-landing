@@ -1,0 +1,53 @@
+"use client";
+import React from "react";
+import { useLottie } from "lottie-react";
+
+export interface LottieViewProps extends React.HTMLAttributes<HTMLDivElement> {
+  animationData?: Record<string, unknown> | null;
+  isLoading?: boolean;
+  isError?: boolean;
+  error?: Error | null;
+}
+
+export const LottieView = ({
+  animationData,
+  isLoading = false,
+  isError = false,
+  error = null,
+  ...props
+}: LottieViewProps) => {
+  const { View } = useLottie(
+    {
+      animationData: animationData || {},
+      loop: true,
+    },
+    {
+      height: "100%",
+      width: "100%",
+    }
+  );
+
+  if (isError) {
+    return (
+      <div
+        {...props}
+        className="flex items-center justify-center text-muted-foreground"
+      >
+        <p>
+          Error al cargar la animación:{" "}
+          {error instanceof Error ? error.message : "Error desconocido"}
+        </p>
+      </div>
+    );
+  }
+
+  if (isLoading || !animationData) {
+    return (
+      <div {...props} className="flex items-center justify-center">
+        <div className="animate-pulse text-muted-foreground">Cargando...</div>
+      </div>
+    );
+  }
+
+  return <div {...props}>{View}</div>;
+};

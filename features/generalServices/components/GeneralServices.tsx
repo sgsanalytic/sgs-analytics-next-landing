@@ -1,7 +1,6 @@
-import React from "react";
-import Image from "next/image";
 import { Check } from "lucide-react";
 import { GENERAL_SERVICES_ITEMS } from "../utils/constant";
+import { LottieHighTech } from "@/features/lotties/components/LottieHighTech";
 
 export const GeneralServices = () => {
   return (
@@ -9,14 +8,7 @@ export const GeneralServices = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 lg:items-center">
         <article className="flex justify-center items-center order-2 lg:order-1">
           <div className="w-full max-w-md lg:max-w-full">
-            <Image
-              src="/ilustrations/ils_14.svg"
-              alt="General Services"
-              width={1000}
-              height={1000}
-              className="w-full h-auto object-contain"
-              priority
-            />
+            <LottieHighTech />
           </div>
         </article>
         <article className="space-y-4 sm:space-y-6 content-center order-1 lg:order-2">

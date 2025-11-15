@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SgsNavigation } from "@/features/custom-ui/components/SgsNavigation";
 import { SgsFooter } from "@/features/custom-ui/components/SgsFooter";
+import { ContextProvider } from "@/features/context/components";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,9 +42,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <SgsNavigation />
-        {children}
-        <SgsFooter />
+        <ContextProvider>
+          <SgsNavigation />
+          {children}
+          <SgsFooter />
+        </ContextProvider>
       </body>
     </html>
   );
