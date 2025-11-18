@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { NAVIGATION_LINKS } from "../utils/constants/navigation";
+import { CONTACT_INFO } from "@/features/ourContact/utils/constants/contact.constants";
 
 export const SgsFooter = () => {
   return (
@@ -8,7 +9,7 @@ export const SgsFooter = () => {
         {/* Columna 1: Marca + breve descripción */}
         <div>
           <h2 className="text-xl font-semibold">SGS Analytics</h2>
-          <p className="mt-2 text-sm">
+          <p className="mt-2 text-sm text-muted-foreground">
             Impulsamos la transformación digital de las empresas mediante IA,
             automatización, nube y analítica avanzada.
           </p>
@@ -20,7 +21,12 @@ export const SgsFooter = () => {
           <ul className="space-y-1 text-sm">
             {NAVIGATION_LINKS.map((link) => (
               <li key={link.id}>
-                <Link href={link.href}>{link.label}</Link>
+                <Link
+                  href={link.href}
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {link.label}
+                </Link>
               </li>
             ))}
           </ul>
@@ -30,24 +36,18 @@ export const SgsFooter = () => {
         <div>
           <h3 className="text-lg font-medium mb-2">Contáctanos</h3>
           <ul className="text-sm space-y-1">
-            <li>
-              <Link href="tel:+50259159360" target="_blank">
-                Teléfono: +502 5915 9360
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="https://www.google.com/maps/search/?api=1&query=14.5917826,-90.5280677"
-                target="_blank"
-              >
-                Ubicación: Ciudad de Guatemala
-              </Link>
-            </li>
-            <li>
-              <Link href="mailto:info@sgsanalytics.com" target="_blank">
-                Soporte 24/7
-              </Link>
-            </li>
+            {CONTACT_INFO.map((contact) => (
+              <li key={contact.id}>
+                <Link
+                  href={contact.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {contact.footerText}: {contact.value}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

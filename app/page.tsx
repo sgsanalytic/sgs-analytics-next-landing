@@ -3,6 +3,7 @@ import { ContactUs } from "@/features/contactForm";
 import { GeneralServices } from "@/features/generalServices";
 import { BasicHero } from "@/features/basicHero";
 import { AboutServices } from "@/features/aboutServices";
+import { OurContact } from "@/features/ourContact";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <Consulting />
         <GeneralServices />
         <AboutServices />
+        <OurContact />
         <ContactUs />
       </main>
     </div>
