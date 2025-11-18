@@ -28,11 +28,11 @@ export const SgsFooter = () => {
 
         {/* Columna 3: Información de contacto */}
         <div>
-          <h3 className="text-lg font-medium mb-2">Contact Us</h3>
+          <h3 className="text-lg font-medium mb-2">Contáctanos</h3>
           <ul className="text-sm space-y-1">
             <li>
               <Link href="tel:+50259159360" target="_blank">
-                Phone: +502 5915 9360
+                Teléfono: +502 5915 9360
               </Link>
             </li>
             <li>
@@ -40,12 +40,12 @@ export const SgsFooter = () => {
                 href="https://www.google.com/maps/search/?api=1&query=14.5917826,-90.5280677"
                 target="_blank"
               >
-                Location: Ciudad de Guatemala
+                Ubicación: Ciudad de Guatemala
               </Link>
             </li>
             <li>
               <Link href="mailto:info@sgsanalytics.com" target="_blank">
-                Support 24/7
+                Soporte 24/7
               </Link>
             </li>
           </ul>
@@ -53,7 +53,7 @@ export const SgsFooter = () => {
       </div>
 
       <div className="mt-10 border-t border-border pt-6 text-center text-xs text-muted-foreground">
-        <p>Copyright © 2025 SGS Analytics. All rights reserved.</p>
+        <p>Copyright © 2025 SGS Analytics. Todos los derechos reservados.</p>
       </div>
     </footer>
   );
