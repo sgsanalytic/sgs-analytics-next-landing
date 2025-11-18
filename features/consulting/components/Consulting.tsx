@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { AccordionConsulting } from "./AccordionConsulting";
 import { ACCORDION_ITEMS } from "../utils/constants/consulting.constants";
 import { Button } from "@/components/ui/button";
@@ -15,7 +16,9 @@ export const Consulting = () => {
           integrando gobernanza, tecnología y visión empresarial para generar
           resultados medibles y sostenibles.
         </p>
-        <Button className="text-xl p-6">Contáctanos</Button>
+        <Button asChild className="text-xl p-6">
+          <Link href="/contact">Contáctanos</Link>
+        </Button>
       </article>
       <article className="space-y-6">
         <AccordionConsulting items={ACCORDION_ITEMS} />

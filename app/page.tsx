@@ -1,22 +1,25 @@
-import { Consulting } from "@/features/consulting";
-import { ContactUs } from "@/features/contactForm";
-import { GeneralServices } from "@/features/generalServices";
 import { BasicHero } from "@/features/basicHero";
-import { AboutServices } from "@/features/aboutServices";
-import { OurContact } from "@/features/ourContact";
-import { AboutUs } from "@/features/aboutUs";
+import { Consulting } from "@/features/consulting";
+import { ServicesTeaser, AboutUsTeaser, HomeCTA } from "@/features/home";
 
 export default function Home() {
   return (
     <div>
-      <main className="pt-16 space-y-6">
+      <main className="pt-16">
+        {/* Hero Section */}
         <BasicHero />
+
+        {/* Consulting Hero */}
         <Consulting />
-        <GeneralServices />
-        <AboutServices />
-        <AboutUs />
-        <OurContact />
-        <ContactUs />
+
+        {/* Services Teaser */}
+        <ServicesTeaser />
+
+        {/* About Us Teaser */}
+        <AboutUsTeaser />
+
+        {/* CTA Section */}
+        <HomeCTA />
       </main>
     </div>
   );
