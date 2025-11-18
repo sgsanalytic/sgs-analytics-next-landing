@@ -17,6 +17,7 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { NAVIGATION_LINKS } from "../utils/constants/navigation";
 import { Menu } from "lucide-react";
 
@@ -40,36 +41,40 @@ export const SgsNavigation = () => {
           </NavigationMenuList>
         </NavigationMenu>
 
-        {/* Mobile Drawer */}
-        <Drawer direction="left">
-          <DrawerTrigger asChild>
-            <Button
-              variant="ghost"
-              size="icon"
-              aria-label="Abrir menú"
-              className="md:hidden"
-            >
-              <Menu />
-            </Button>
-          </DrawerTrigger>
-          <DrawerContent>
-            <DrawerHeader>
-              <DrawerTitle>Menú</DrawerTitle>
-            </DrawerHeader>
-            <nav className="flex flex-col p-4 space-y-2">
-              {NAVIGATION_LINKS.map((link) => (
-                <DrawerClose key={link.id} asChild>
-                  <Link
-                    href={link.href}
-                    className="px-4 py-3 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors text-left"
-                  >
-                    {link.label}
-                  </Link>
-                </DrawerClose>
-              ))}
-            </nav>
-          </DrawerContent>
-        </Drawer>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+
+          {/* Mobile Drawer */}
+          <Drawer direction="left">
+            <DrawerTrigger asChild>
+              <Button
+                variant="ghost"
+                size="icon"
+                aria-label="Abrir menú"
+                className="md:hidden"
+              >
+                <Menu />
+              </Button>
+            </DrawerTrigger>
+            <DrawerContent>
+              <DrawerHeader>
+                <DrawerTitle>Menú</DrawerTitle>
+              </DrawerHeader>
+              <nav className="flex flex-col p-4 space-y-2">
+                {NAVIGATION_LINKS.map((link) => (
+                  <DrawerClose key={link.id} asChild>
+                    <Link
+                      href={link.href}
+                      className="px-4 py-3 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors text-left"
+                    >
+                      {link.label}
+                    </Link>
+                  </DrawerClose>
+                ))}
+              </nav>
+            </DrawerContent>
+          </Drawer>
+        </div>
       </div>
     </nav>
   );
