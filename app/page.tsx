@@ -4,6 +4,7 @@ import { GeneralServices } from "@/features/generalServices";
 import { BasicHero } from "@/features/basicHero";
 import { AboutServices } from "@/features/aboutServices";
 import { OurContact } from "@/features/ourContact";
+import { AboutUs } from "@/features/aboutUs";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <Consulting />
         <GeneralServices />
         <AboutServices />
+        <AboutUs />
         <OurContact />
         <ContactUs />
       </main>
