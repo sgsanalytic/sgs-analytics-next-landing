@@ -13,7 +13,7 @@ export const GeneralServices = () => {
         </article>
         <article className="space-y-4 sm:space-y-6 content-center order-1 lg:order-2">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight">
-            Servicios generales
+            Servicios
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
             Conoce nuestros soluciones enfocadas al entendimiento de sus
