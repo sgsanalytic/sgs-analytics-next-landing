@@ -36,7 +36,7 @@ export const ContactForm = () => {
     console.log(values);
   };
   return (
-    <Card className="p-6">
+    <Card className="p-6 mx-auto container">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <FormField

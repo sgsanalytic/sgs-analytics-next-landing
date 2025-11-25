@@ -7,7 +7,7 @@ import { ContactForm } from "@/features/contactForm";
 export default function ServicesConsultingPage() {
   return (
     <div>
-      <main className="pt-16 container">
+      <main className="pt-16">
         {/* Hero Section */}
         <ServicesHero />
 
