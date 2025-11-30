@@ -25,6 +25,7 @@
   --color-input: var(--input);
   --color-border: var(--border);
   --color-destructive: var(--destructive);
+  --color-success: var(--success);
   --color-accent-foreground: var(--accent-foreground);
   --color-accent: var(--accent);
   --color-muted-foreground: var(--muted-foreground);
@@ -68,6 +69,9 @@
   /* Rojo para acciones destructivas */
   --destructive: oklch(0.6368 0.2078 25.33); /* #EF4444 */
   --destructive-foreground: oklch(1 0 0); /* #FFFFFF */
+  /* Verde para éxito */
+  --success: oklch(0.7227 0.192 149.58); /* #22C55E */
+  --success-foreground: oklch(1 0 0); /* #FFFFFF */
   /* Bordes e inputs */
   --border: oklch(0.8943 0.0549 293.28); /* #ddd6fe */
   --input: oklch(0.8943 0.0549 293.28); /* #ddd6fe */
@@ -114,6 +118,9 @@
 
   --destructive: oklch(0.6368 0.2078 25.33); /* #EF4444 */
   --destructive-foreground: oklch(1 0 0); /* #FFFFFF */
+
+  --success: oklch(0.7227 0.192 149.58); /* #22C55E */
+  --success-foreground: oklch(1 0 0); /* #FFFFFF */
 
   --border: oklch(0.3277 0.0944 313.89); /* #5a4568 */
   --input: oklch(0.3277 0.0944 313.89); /* #5a4568 */
