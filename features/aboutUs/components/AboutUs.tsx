@@ -1,7 +1,16 @@
 import React from "react";
 import { AboutUsCarrousel } from "./AboutUsCarrousel";
+import {
+  Certification,
+  Experience,
+} from "../utils/constants/aboutUs.constants";
 
-export const AboutUs = () => {
+interface AboutUsProps {
+  certifications: Certification[];
+  experiences: Experience[];
+}
+
+export const AboutUs = ({ certifications, experiences }: AboutUsProps) => {
   return (
     <section className="py-16 md:py-24 bg-background text-foreground">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -25,7 +34,10 @@ export const AboutUs = () => {
         </div>
 
         {/* Carousels Section */}
-        <AboutUsCarrousel />
+        <AboutUsCarrousel
+          certifications={certifications}
+          experiences={experiences}
+        />
       </div>
     </section>
   );

@@ -12,11 +12,19 @@ import {
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import {
-  CERTIFICATIONS,
-  EXPERIENCE,
+  Certification,
+  Experience,
 } from "../utils/constants/aboutUs.constants";
 
-export const AboutUsCarrousel = () => {
+interface AboutUsCarrouselProps {
+  certifications: Certification[];
+  experiences: Experience[];
+}
+
+export const AboutUsCarrousel = ({
+  certifications,
+  experiences,
+}: AboutUsCarrouselProps) => {
   const certificationsAutoplay = React.useRef(
     Autoplay({ delay: 3000, stopOnInteraction: true })
   );
@@ -43,7 +51,7 @@ export const AboutUsCarrousel = () => {
           onMouseLeave={certificationsAutoplay.current.reset}
         >
           <CarouselContent className="-ml-2 md:-ml-4">
-            {CERTIFICATIONS.map((certification) => (
+            {certifications.map((certification) => (
               <CarouselItem
                 key={certification.id}
                 className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3"
@@ -95,7 +103,7 @@ export const AboutUsCarrousel = () => {
           onMouseLeave={experienceAutoplay.current.reset}
         >
           <CarouselContent className="-ml-2 md:-ml-4">
-            {EXPERIENCE.map((company) => (
+            {experiences.map((company) => (
               <CarouselItem
                 key={company.id}
                 className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3"
