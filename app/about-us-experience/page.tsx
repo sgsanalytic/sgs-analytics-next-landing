@@ -8,6 +8,9 @@ import {
   mapExperiencesToComponent,
 } from "@/features/aboutUs/utils/mappers/aboutUs.mappers";
 
+// Revalidar los datos cada 3 minutos (180 segundos)
+export const revalidate = 180;
+
 export default async function AboutUsExperiencePage() {
   // Obtener datos en el servidor
   const [certificationsData, experiencesData] = await Promise.all([
