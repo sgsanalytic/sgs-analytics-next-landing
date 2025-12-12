@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { useLottie } from "lottie-react";
+import { Loader2 } from "lucide-react";
 
 export interface LottieViewProps extends React.HTMLAttributes<HTMLDivElement> {
   animationData?: Record<string, unknown> | null;
@@ -14,6 +15,7 @@ export const LottieView = ({
   isLoading = false,
   isError = false,
   error = null,
+  className = "",
   ...props
 }: LottieViewProps) => {
   const { View } = useLottie(
@@ -31,7 +33,7 @@ export const LottieView = ({
     return (
       <div
         {...props}
-        className="flex items-center justify-center text-muted-foreground"
+        className={`flex items-center justify-center text-muted-foreground w-full h-full ${className}`}
       >
         <p>
           Error al cargar la animación:{" "}
@@ -43,11 +45,18 @@ export const LottieView = ({
 
   if (isLoading || !animationData) {
     return (
-      <div {...props} className="flex items-center justify-center">
-        <div className="animate-pulse text-muted-foreground">Cargando...</div>
+      <div
+        {...props}
+        className={`flex items-center justify-center w-full h-full ${className}`}
+      >
+        <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
       </div>
     );
   }
 
-  return <div {...props}>{View}</div>;
+  return (
+    <div {...props} className={`w-full h-full ${className}`}>
+      {View}
+    </div>
+  );
 };

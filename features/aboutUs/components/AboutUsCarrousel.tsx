@@ -109,8 +109,8 @@ export const AboutUsCarrousel = ({
                 className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3"
               >
                 <Card className="h-full">
-                  <CardContent className="flex items-center justify-center p-6 aspect-video">
-                    <div className="relative w-full h-24 flex items-center justify-center">
+                  <CardContent className="flex items-center justify-center p-3 md:p-4 aspect-video">
+                    <div className="relative w-full h-full flex items-center justify-center">
                       <Image
                         src={company.logoUrl}
                         alt={company.company}
