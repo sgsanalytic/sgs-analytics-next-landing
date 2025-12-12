@@ -115,7 +115,7 @@ export const AboutUsCarrousel = ({
                         src={company.logoUrl}
                         alt={company.company}
                         fill
-                        className="object-contain"
+                        className="object-contain rounded-lg"
                       />
                     </div>
                   </CardContent>
