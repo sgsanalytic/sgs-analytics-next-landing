@@ -39,23 +39,23 @@ export const AboutUs = ({ certifications, experiences }: AboutUsProps) => {
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
                 <div className="flex items-start gap-3">
-                  <div className="h-1.5 w-1.5 rounded-full bg-primary mt-2.5 flex-shrink-0" />
+                  <div className="h-1.5 w-1.5 rounded-full bg-primary mt-2.5 shrink-0" />
                   <span className="text-base sm:text-lg text-foreground">Data Engineering</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="h-1.5 w-1.5 rounded-full bg-primary mt-2.5 flex-shrink-0" />
+                  <div className="h-1.5 w-1.5 rounded-full bg-primary mt-2.5 shrink-0" />
                   <span className="text-base sm:text-lg text-foreground">Power BI</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="h-1.5 w-1.5 rounded-full bg-primary mt-2.5 flex-shrink-0" />
+                  <div className="h-1.5 w-1.5 rounded-full bg-primary mt-2.5 shrink-0" />
                   <span className="text-base sm:text-lg text-foreground">Machine Learning</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="h-1.5 w-1.5 rounded-full bg-primary mt-2.5 flex-shrink-0" />
+                  <div className="h-1.5 w-1.5 rounded-full bg-primary mt-2.5 shrink-0" />
                   <span className="text-base sm:text-lg text-foreground">Automatización</span>
                 </div>
                 <div className="flex items-start gap-3 sm:col-span-2">
-                  <div className="h-1.5 w-1.5 rounded-full bg-primary mt-2.5 flex-shrink-0" />
+                  <div className="h-1.5 w-1.5 rounded-full bg-primary mt-2.5 shrink-0" />
                   <span className="text-base sm:text-lg text-foreground">Optimización de costos en la nube (FinOps)</span>
                 </div>
               </div>
