@@ -15,17 +15,14 @@ export const Consulting = () => {
             <div className="flex items-center gap-3 mb-2">
               <div className="h-1 w-12 bg-primary rounded-full" />
               <span className="text-sm md:text-base font-medium text-primary uppercase tracking-wider">
-                Consultoría
+              Dashboards Ejecutivos y Power BI
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-              Estrategias Efectivas
-              <span className="text-primary"> con Datos</span>
+            Dashboards Ejecutivos y Analítica con Power BI
             </h2>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-              Impulsamos la transformación digital de las empresas mediante IA,
-              automatización, nube y analítica avanzada. Convertimos los datos
-              en estrategia, eficiencia y crecimiento.
+              En SGS Analytics desarrollamos dashboards ejecutivos en Power BI que permiten a las áreas de finanzas, ventas y operaciones reemplazar reportes manuales en Excel por analítica automatizada y en tiempo real.
             </p>
             <Button asChild size="lg" className="mt-4">
               <Link href="/contact">Agenda una consulta</Link>

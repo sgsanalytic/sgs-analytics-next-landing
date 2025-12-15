@@ -1,5 +1,10 @@
 import { ServicesHero } from "@/features/servicesConsulting";
-import { Consulting } from "@/features/consulting";
+import { 
+  Consulting, 
+  DataScience, 
+  DataGovernance, 
+  FinOps 
+} from "@/features/consulting";
 import { GeneralServices } from "@/features/generalServices";
 import { AboutServices } from "@/features/aboutServices";
 import { ContactForm } from "@/features/contactForm";
@@ -11,8 +16,17 @@ export default function ServicesConsultingPage() {
         {/* Hero Section */}
         <ServicesHero />
 
-        {/* Consulting Section */}
+        {/* Consulting Section - Power BI */}
         <Consulting />
+
+        {/* Data Science Section */}
+        <DataScience />
+
+        {/* Data Governance Section */}
+        <DataGovernance />
+
+        {/* FinOps Section */}
+        <FinOps />
 
         {/* General Services Section */}
         <GeneralServices />

@@ -13,12 +13,10 @@ export const BasicHero = () => {
         </article>
         <article className="space-y-4 sm:space-y-6 content-center order-1 lg:order-2">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
-            SGS Analytics
+          Empresa de Ingeniería de Datos, Cloud e Inteligencia Artificial en Latinoamérica
           </h1>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-            Nos apasiona ayudar a las empresas a desbloquear el potencial oculto
-            en sus datos, permitiéndoles crecer de manera más inteligente y
-            eficiente
+          En SGS Analytics ayudamos a empresas medianas y corporativas a diseñar plataformas de datos, dashboards ejecutivos, modelos predictivos y optimizar costos en la nube mediante prácticas de FinOps.
           </p>
           <div>
             <Button asChild size="lg" className="mt-4">
