@@ -35,8 +35,8 @@ export const CONTACT_INFO: ContactInfo[] = [
     title: "Soporte especializado",
     description: "Soporte 24/7",
     footerText: "Correo electrónico",
-    value: "info@sgsanalytics.com",
-    href: "mailto:info@sgsanalytics.com",
+    value: "info@sgsanalytic.com",
+    href: "mailto:info@sgsanalytic.com",
     icon: Headphones,
   },
 ];
