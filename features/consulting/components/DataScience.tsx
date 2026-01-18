@@ -1,14 +1,16 @@
 import React from "react";
-
-const USE_CASES = [
-  "Churn",
-  "Fraude",
-  "Segmentación de clientes",
-  "Forecasting",
-  "Optimización de procesos",
-];
+import { useTranslations } from "next-intl";
 
 export const DataScience = () => {
+  const t = useTranslations('consulting.dataScience');
+  
+  const USE_CASES = [
+    t('churn'),
+    t('fraude'),
+    t('segmentacion'),
+    t('forecasting'),
+    t('optimizacion'),
+  ];
   return (
     <section className="py-12 md:py-20 bg-background text-foreground">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,22 +18,24 @@ export const DataScience = () => {
           <div className="flex items-center gap-3 mb-4 md:mb-6">
             <div className="h-1 w-12 bg-primary rounded-full" />
             <span className="text-sm md:text-base font-medium text-primary uppercase tracking-wider">
-              Data Science e Inteligencia Artificial
+              {t('badge')}
             </span>
           </div>
           
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6">
-            Data Science e Inteligencia Artificial Aplicada
+            {t('title')}
           </h2>
           
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-8 max-w-3xl">
-            Implementamos modelos predictivos e inteligencia artificial para casos de uso empresariales, integrando prácticas de <span className="text-primary font-semibold">MLOps</span> para su operación en entornos productivos.
+            {t.rich('description', {
+              mlops: (chunks) => <span className="text-primary font-semibold">{chunks}</span>
+            })}
           </p>
 
           {/* Use Cases Tags */}
           <div className="space-y-4">
             <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
-              Casos de uso:
+              {t('useCases')}
             </p>
             <div className="flex flex-wrap gap-3">
               {USE_CASES.map((useCase) => (

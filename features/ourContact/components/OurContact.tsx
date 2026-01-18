@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { CONTACT_INFO } from "../utils/constants/contact.constants";
+import { useTranslations } from "next-intl";
+import { getContactInfo } from "../utils/constants/contact.constants";
 import {
   Card,
   CardContent,
@@ -10,6 +11,8 @@ import {
 } from "@/components/ui/card";
 
 export const OurContact = () => {
+  const t = useTranslations('contact');
+  const contactInfo = getContactInfo(t);
   return (
     <section className="py-16 md:py-24 bg-background text-foreground">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,21 +21,20 @@ export const OurContact = () => {
           <div className="flex items-center gap-3 mb-4 md:mb-6">
             <div className="h-1 w-12 bg-primary rounded-full" />
             <span className="text-sm md:text-base font-medium text-primary uppercase tracking-wider">
-              Contáctanos
+              {t('title')}
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 text-foreground leading-tight">
-            Contacto
+            {t('title')}
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-            Estamos aquí para ayudarte. Ponte en contacto con nosotros a través
-            de cualquiera de nuestros canales disponibles.
+            {t('description')}
           </p>
         </div>
 
         {/* Contact Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {CONTACT_INFO.map((contact) => {
+          {contactInfo.map((contact) => {
             const IconComponent = contact.icon;
             return (
               <Card

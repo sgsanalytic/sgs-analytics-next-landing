@@ -1,5 +1,6 @@
 import React from "react";
-import { ABOUT_SERVICES } from "../utils/contants/aboutServices.constants";
+import { useTranslations } from "next-intl";
+import { getAboutServices } from "../utils/contants/aboutServices.constants";
 import { AboutService } from "../interfaces";
 import {
   Card,
@@ -10,6 +11,10 @@ import {
 } from "@/components/ui/card";
 
 export const AboutServices = () => {
+  const t = useTranslations('services');
+  const tAboutServices = useTranslations('aboutServices');
+  const aboutServices = getAboutServices(t);
+  
   return (
     <section className="py-16 md:py-24 bg-background text-foreground">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,23 +23,20 @@ export const AboutServices = () => {
           <div className="flex items-center gap-3 mb-4 md:mb-6">
             <div className="h-1 w-12 bg-primary rounded-full" />
             <span className="text-sm md:text-base font-medium text-primary uppercase tracking-wider">
-              Nuestros Servicios
+              {tAboutServices('badge')}
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 text-foreground leading-tight">
-            Servicios
+            {tAboutServices('title')}
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-            Nuestros servicios te ayudarán a incrementar tus ventas, fidelizar
-            al cliente, descubrir mediante el análisis de datos productos
-            estrellas, obtener ventaja competitiva, en resumen Maximizar la
-            eficiencia en el uso de los datos
+            {tAboutServices('description')}
           </p>
         </div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {ABOUT_SERVICES.map((service: AboutService) => {
+          {aboutServices.map((service: AboutService) => {
             const IconComponent = service.icono;
             return (
               <Card

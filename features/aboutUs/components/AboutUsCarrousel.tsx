@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
 import {
@@ -25,6 +26,7 @@ export const AboutUsCarrousel = ({
   certifications,
   experiences,
 }: AboutUsCarrouselProps) => {
+  const t = useTranslations('about');
   const certificationsAutoplay = React.useRef(
     Autoplay({ delay: 3000, stopOnInteraction: true })
   );
@@ -38,7 +40,7 @@ export const AboutUsCarrousel = ({
       {/* Certifications Carousel */}
       <div>
         <h3 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
-          Certificaciones
+          {t('certifications')}
         </h3>
         <Carousel
           opts={{
@@ -90,7 +92,7 @@ export const AboutUsCarrousel = ({
       {/* Experience Carousel */}
       <div>
         <h3 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
-          Nuestra experiencia
+          {t('experience')}
         </h3>
         <Carousel
           opts={{

@@ -1,8 +1,10 @@
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { LottieCustomProyecjt } from "@/features/lotties/components/LottieCustomProyecjt";
 import { Button } from "@/components/ui/button";
 
 export const BasicHero = () => {
+  const t = useTranslations('hero');
   return (
     <section className="py-4 sm:py-6 lg:py-8 bg-background text-foreground container mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 lg:items-center">
@@ -13,14 +15,14 @@ export const BasicHero = () => {
         </article>
         <article className="space-y-4 sm:space-y-6 content-center order-1 lg:order-2">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
-          Empresa de Ingeniería de Datos, Cloud e Inteligencia Artificial en Latinoamérica
+            {t('title')}
           </h1>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-          En SGS Analytics ayudamos a empresas medianas y corporativas a diseñar plataformas de datos, dashboards ejecutivos, modelos predictivos y optimizar costos en la nube mediante prácticas de FinOps.
+            {t('description')}
           </p>
           <div>
             <Button asChild size="lg" className="mt-4">
-              <Link href="/contact">Contáctanos</Link>
+              <Link href="/contact">{t('contactButton')}</Link>
             </Button>
           </div>
         </article>

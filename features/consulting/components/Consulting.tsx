@@ -1,10 +1,14 @@
 import React from "react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { CarouselConsulting } from "./CarouselConsulting";
-import { ACCORDION_ITEMS } from "../utils/constants/consulting.constants";
+import { getAccordionItems } from "../utils/constants/consulting.constants";
 import { Button } from "@/components/ui/button";
 
 export const Consulting = () => {
+  const t = useTranslations('consulting.powerBi');
+  const tAccordion = useTranslations('consulting');
+  const accordionItems = getAccordionItems(tAccordion);
   return (
     <section className="py-12 md:py-20 bg-muted/30 text-foreground">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,17 +19,17 @@ export const Consulting = () => {
             <div className="flex items-center gap-3 mb-2">
               <div className="h-1 w-12 bg-primary rounded-full" />
               <span className="text-sm md:text-base font-medium text-primary uppercase tracking-wider">
-              Dashboards Ejecutivos y Power BI
+                {t('badge')}
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-            Dashboards Ejecutivos y Analítica con Power BI
+              {t('title')}
             </h2>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-              En SGS Analytics desarrollamos dashboards ejecutivos en Power BI que permiten a las áreas de finanzas, ventas y operaciones reemplazar reportes manuales en Excel por analítica automatizada y en tiempo real.
+              {t('description')}
             </p>
             <Button asChild size="lg" className="mt-4">
-              <Link href="/contact">Agenda una consulta</Link>
+              <Link href="/contact">{t('cta')}</Link>
             </Button>
           </div>
 
@@ -36,7 +40,7 @@ export const Consulting = () => {
                 10+
               </div>
               <div className="text-sm text-muted-foreground">
-                Áreas de expertise
+                {t('stats.expertise')}
               </div>
             </div>
             <div className="bg-background/80 backdrop-blur-sm rounded-xl p-5 md:p-6 border border-border/50 text-center hover:border-primary/50 transition-colors duration-300">
@@ -44,7 +48,7 @@ export const Consulting = () => {
                 40+
               </div>
               <div className="text-sm text-muted-foreground">
-                Certificaciones
+                {t('stats.certifications')}
               </div>
             </div>
             <div className="bg-background/80 backdrop-blur-sm rounded-xl p-5 md:p-6 border border-border/50 text-center col-span-2 sm:col-span-1 hover:border-primary/50 transition-colors duration-300">
@@ -52,7 +56,7 @@ export const Consulting = () => {
                 24/7
               </div>
               <div className="text-sm text-muted-foreground">
-                Soporte continuo
+                {t('stats.support')}
               </div>
             </div>
           </div>
@@ -60,7 +64,7 @@ export const Consulting = () => {
 
         {/* Carousel Section */}
         <div className="relative">
-          <CarouselConsulting items={ACCORDION_ITEMS} />
+          <CarouselConsulting items={accordionItems} />
         </div>
       </div>
     </section>

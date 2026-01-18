@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { getTranslations } from "next-intl/server";
 import "./globals.css";
 import { SgsNavigation } from "@/features/custom-ui/components/SgsNavigation";
 import { SgsFooter } from "@/features/custom-ui/components/SgsFooter";
 import { ContextProvider } from "@/features/context/components";
+import {NextIntlClientProvider} from 'next-intl';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,22 +17,26 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Automatiza - SGS ANALYTICS",
-  description: "Automatiza tu negocio con SGS ANALYTICS",
-  icons: {
-    icon: "/favicon.ico",
-  },
-  openGraph: {
-    title: "Automatiza - SGS ANALYTICS",
-    description: "Automatiza tu negocio con SGS ANALYTICS",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Automatiza - SGS ANALYTICS",
-    description: "Automatiza tu negocio con SGS ANALYTICS",
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('metadata');
+  
+  return {
+    title: t('title'),
+    description: t('description'),
+    icons: {
+      icon: "/favicon.ico",
+    },
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t('title'),
+      description: t('description'),
+    },
+  };
+}
 
 export default function RootLayout({
   children,
@@ -43,9 +49,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ContextProvider>
-          <SgsNavigation />
-          {children}
-          <SgsFooter />
+          <NextIntlClientProvider>
+            <SgsNavigation />
+            {children}
+            <SgsFooter />
+          </NextIntlClientProvider>
         </ContextProvider>
       </body>
     </html>

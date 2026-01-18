@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -18,11 +19,15 @@ import {
 } from "@/components/ui/drawer";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { LocaleToggle } from "@/components/ui/locale-toggle";
 import { SgsIconSvg } from "./SgsIconSvg";
-import { NAVIGATION_LINKS } from "../utils/constants/navigation";
+import { getNavigationLinks } from "../utils/constants/navigation";
 import { Menu, X } from "lucide-react";
 
 export const SgsNavigation = () => {
+  const t = useTranslations('navigation');
+  const navigationLinks = getNavigationLinks(t);
+  
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -36,14 +41,14 @@ export const SgsNavigation = () => {
               <SgsIconSvg className="w-full h-full" />
             </div>
             <span className="text-lg md:text-xl font-bold text-foreground hidden sm:block">
-              SGS Analytics
+              {t('brand')}
             </span>
           </Link>
 
           {/* Desktop Navigation */}
           <NavigationMenu className="hidden md:flex">
             <NavigationMenuList className="gap-1">
-              {NAVIGATION_LINKS.map((link) => (
+              {navigationLinks.map((link) => (
                 <NavigationMenuItem key={link.id}>
                   <NavigationMenuLink
                     asChild
@@ -63,6 +68,7 @@ export const SgsNavigation = () => {
 
           {/* Right Side Actions */}
           <div className="flex items-center gap-2 md:gap-4">
+            <LocaleToggle />
             <ThemeToggle />
 
             {/* Mobile Drawer */}
@@ -71,7 +77,7 @@ export const SgsNavigation = () => {
                 <Button
                   variant="ghost"
                   size="icon"
-                  aria-label="Abrir menú"
+                  aria-label={t('openMenu')}
                   className="md:hidden"
                 >
                   <Menu className="h-5 w-5" />
@@ -85,7 +91,7 @@ export const SgsNavigation = () => {
                         <SgsIconSvg className="w-full h-full" />
                       </div>
                       <DrawerTitle className="text-lg font-bold">
-                        SGS Analytics
+                        {t('brand')}
                       </DrawerTitle>
                     </div>
                     <DrawerClose asChild>
@@ -93,7 +99,7 @@ export const SgsNavigation = () => {
                         variant="ghost"
                         size="icon"
                         className="h-8 w-8"
-                        aria-label="Cerrar menú"
+                        aria-label={t('closeMenu')}
                       >
                         <X className="h-4 w-4" />
                       </Button>
@@ -101,7 +107,7 @@ export const SgsNavigation = () => {
                   </div>
                 </DrawerHeader>
                 <nav className="flex flex-col p-4 space-y-1">
-                  {NAVIGATION_LINKS.map((link) => (
+                  {navigationLinks.map((link) => (
                     <DrawerClose key={link.id} asChild>
                       <Link
                         href={link.href}

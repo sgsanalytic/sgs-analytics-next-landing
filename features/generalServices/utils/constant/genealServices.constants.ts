@@ -1,66 +1,66 @@
-export const GENERAL_SERVICES_ITEMS: { id: string; title: string }[] = [
+export const getGeneralServicesItems = (t: (key: string) => string): { id: string; title: string }[] => [
   {
     id: "1",
-    title: "Automatización de procesos",
+    title: t("items.1"),
   },
   {
     id: "2",
-    title: "Estadística Avanzada",
+    title: t("items.2"),
   },
   {
     id: "3",
-    title: "Power BI",
+    title: t("items.3"),
   },
   {
     id: "4",
-    title: "Centralización de datos",
+    title: t("items.4"),
   },
   {
     id: "5",
-    title: "Administración de datos",
+    title: t("items.5"),
   },
   {
     id: "6",
-    title: "Data Warehouse",
+    title: t("items.6"),
   },
   {
     id: "7",
-    title: "Tableros Avanzados",
+    title: t("items.7"),
   },
   {
     id: "8",
-    title: "Plugins y APIS",
+    title: t("items.8"),
   },
   {
     id: "9",
-    title: "Power APP's",
+    title: t("items.9"),
   },
   {
     id: "10",
-    title: "Alertas automáticas",
+    title: t("items.10"),
   },
   {
     id: "11",
-    title: "Data Streaming",
+    title: t("items.11"),
   },
   {
     id: "12",
-    title: "IA Agents",
+    title: t("items.12"),
   },
   {
     id: "13",
-    title: "Optimización de gastos en Nube",
+    title: t("items.13"),
   },
   {
     id: "14",
-    title: "Implementación en nube (AWS, GCP y Azure)",
+    title: t("items.14"),
   },
   {
     id: "15",
-    title: "Machine Learning",
+    title: t("items.15"),
   },
   {
     id: "16",
-    title: "IA a la medida",
+    title: t("items.16"),
   },
 ];

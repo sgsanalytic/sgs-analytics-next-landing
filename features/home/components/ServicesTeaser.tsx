@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ABOUT_SERVICES } from "@/features/aboutServices/utils/contants/aboutServices.constants";
+import { useTranslations } from "next-intl";
+import { getAboutServices } from "@/features/aboutServices/utils/contants/aboutServices.constants";
 import { AboutService } from "@/features/aboutServices/interfaces";
 import {
   Card,
@@ -11,8 +12,11 @@ import {
 import { Button } from "@/components/ui/button";
 
 export const ServicesTeaser = () => {
+  const t = useTranslations('home.services');
+  const tServices = useTranslations('services');
   // Mostrar solo los primeros 3 servicios como teaser
-  const featuredServices = ABOUT_SERVICES.slice(0, 3);
+  const aboutServices = getAboutServices(tServices);
+  const featuredServices = aboutServices.slice(0, 3);
 
   return (
     <section className="py-16 md:py-24 bg-background text-foreground">
@@ -21,16 +25,14 @@ export const ServicesTeaser = () => {
           <div className="flex items-center gap-3 mb-4 md:mb-6">
             <div className="h-1 w-12 bg-primary rounded-full" />
             <span className="text-sm md:text-base font-medium text-primary uppercase tracking-wider">
-              Nuestros Servicios
+              {t('badge')}
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 text-foreground leading-tight">
-            Servicios
+            {t('title')}
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mb-6">
-            Nuestros servicios te ayudarán a incrementar tus ventas, fidelizar
-            al cliente, descubrir mediante el análisis de datos productos
-            estrellas, obtener ventaja competitiva.
+            {t('description')}
           </p>
         </div>
 
@@ -68,7 +70,7 @@ export const ServicesTeaser = () => {
 
         <div className="text-center">
           <Button asChild size="lg">
-            <Link href="/services-consulting">Ver todos los servicios</Link>
+            <Link href="/services-consulting">{t('viewAll')}</Link>
           </Button>
         </div>
       </div>

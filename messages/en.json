@@ -1,0 +1,274 @@
+{
+  "navigation": {
+    "home": "Home",
+    "aboutUs": "About Us",
+    "services": "Services and Consulting",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "brand": "SGS Analytics"
+  },
+  "hero": {
+    "title": "Data Engineering, Cloud and Artificial Intelligence Company in Latin America",
+    "description": "At SGS Analytics, we help medium and corporate companies design data platforms, executive dashboards, predictive models, and optimize cloud costs through FinOps practices.",
+    "contactButton": "Contact Us"
+  },
+  "services": {
+    "title": "Data Engineering and Analytics",
+    "mainTitle": "Data Engineering and Business Analytics",
+    "description": "We design and build modern data architectures that enable companies to centralize information from multiple sources, automate ETL/ELT processes, and ensure data quality and reliability for analysis and reporting.",
+    "technologies": "Technologies:",
+    "azure": "Azure",
+    "aws": "AWS",
+    "databricks": "Databricks",
+    "snowflake": "Snowflake",
+    "sqlServer": "SQL Server",
+    "items": {
+      "consultorias-datos": {
+        "titulo": "Data Consulting",
+        "descripcion": "Discover the unlimited potential of your data with SGS Analytics, your comprehensive partner in Data Consulting and Analytics as a Service. From effective data management to transforming big data into strategic decisions, we offer customized solutions that drive innovation and business performance. With us, your journey to data excellence begins now."
+      },
+      "desarrollos-etl": {
+        "titulo": "ETL Development",
+        "descripcion": "Optimize your data management with our ETL (Extract, Transform, Load) Development services at SGS Analytics. We simplify data flow, from extraction to loading, ensuring seamless integration and timely availability of key information. Our customized approach guarantees an efficient ETL architecture, driving quality and agility in decision-making. Trust us to convert your data into strategic assets with our leading ETL development service."
+      },
+      "business-intelligence": {
+        "titulo": "Business Intelligence",
+        "descripcion": "Business Intelligence for companies provides significant value, enabling businesses to gain competitive advantages. Through business intelligence solutions, companies can significantly improve their decision-making, increase operational efficiency, and achieve sustainable competitive advantages."
+      },
+      "automatizacion-procesos": {
+        "titulo": "Process Automation",
+        "descripcion": "Transform your operations with the efficiency of process automation from SGS Analytics. We simplify and optimize your workflows, eliminating manual tasks and freeing up valuable time. From opportunity identification to implementation of robust solutions, we offer automation services that drive productivity and business agility. Give your team the freedom to focus on what matters while we do the heavy lifting!"
+      },
+      "transformacion-digital": {
+        "titulo": "Digital Transformation",
+        "descripcion": "We accelerate the digital transformation of companies through cloud architectures, DevOps, and automation on AWS, Azure, and GCP. We are experts in security, operational efficiency, and cost optimization in cloud environments, ensuring scalability and sustainable results."
+      },
+      "data-governance-services": {
+        "titulo": "Data Governance Services",
+        "descripcion": "We guarantee excellence in data management to enhance your analytical strategy. From policy creation and security to role definition, we optimize the quality and reliability of your data. With SGS Analytics, we transform information into intelligence to drive your success."
+      }
+    }
+  },
+  "consulting": {
+    "powerBi": {
+      "badge": "Executive Dashboards and Power BI",
+      "title": "Executive Dashboards and Analytics with Power BI",
+      "description": "At SGS Analytics, we develop executive dashboards in Power BI that enable finance, sales, and operations departments to replace manual Excel reports with automated, real-time analytics.",
+      "cta": "Schedule a consultation",
+      "stats": {
+        "expertise": "Areas of expertise",
+        "certifications": "Certifications",
+        "support": "Continuous support"
+      }
+    },
+    "dataScience": {
+      "badge": "Data Science and Artificial Intelligence",
+      "title": "Applied Data Science and Artificial Intelligence",
+      "description": "We implement predictive models and artificial intelligence for business use cases, integrating <mlops>MLOps</mlops> practices for their operation in production environments.",
+      "descriptionFormatted": "We implement predictive models and artificial intelligence for business use cases, integrating {mlops} practices for their operation in production environments.",
+      "mlops": "MLOps",
+      "useCases": "Use cases:",
+      "churn": "Churn",
+      "fraude": "Fraud",
+      "segmentacion": "Customer segmentation",
+      "forecasting": "Forecasting",
+      "optimizacion": "Process optimization"
+    },
+    "dataGovernance": {
+      "badge": "Data Governance and Quality",
+      "title": "Data Governance and Quality",
+      "description": "We help organizations establish data governance models based on the <dama>DAMA</dama> framework, ensuring the appropriate use of information for decision-making.",
+      "pillars": {
+        "calidad": {
+          "title": "Quality",
+          "description": "Reliable and accurate data"
+        },
+        "trazabilidad": {
+          "title": "Traceability",
+          "description": "Complete lifecycle tracking"
+        },
+        "seguridad": {
+          "title": "Security",
+          "description": "Protection and regulatory compliance"
+        },
+        "gobernanza": {
+          "title": "Governance",
+          "description": "Appropriate use of information"
+        }
+      }
+    },
+    "finOps": {
+      "badge": "Cloud and FinOps",
+      "title": "Cloud Cost Optimization",
+      "description": "Through <finops>FinOps</finops> practices and our cloud expertise, we help companies optimize their costs through visibility, control, and prediction of cloud spending.",
+      "reduction": "cloud cost reduction",
+      "platforms": "Platforms:"
+    },
+    "accordion": {
+      "1": {
+        "title": "Effective Data Strategies",
+        "content": "An organizational change in how decisions are made and strategies are created. We have experience in making corporate strategies happen using data."
+      },
+      "2": {
+        "title": "Statistical Analysis",
+        "content": "Describe the nature of the data to be analyzed. Explore the relationship of the data with the underlying population. Create a model that summarizes the understanding of the relationship of the data with the underlying population. Demonstrate (or refute) the validity of the model."
+      },
+      "3": {
+        "title": "ETL Development",
+        "content": "ETL is a type of data integration that refers to the three steps (extract, transform, load) used to blend data from multiple sources. It is often used to build a data warehouse."
+      },
+      "4": {
+        "title": "Database",
+        "content": "A database stores data and connects it into a logical unit along with the metadata necessary for its processing. Databases are highly useful tools for managing large files and facilitating information queries."
+      },
+      "5": {
+        "title": "Data Governance",
+        "content": "Data governance is a term used at both macro and micro levels. The first is a political concept and is part of international relations and Internet governance; the latter is a data management concept and is part of corporate data governance."
+      },
+      "6": {
+        "title": "Digital Transformation",
+        "content": "Digital transformation is the process by which an organization integrates digital technology into all business areas. This process completely changes the way an organization delivers value to customers."
+      },
+      "7": {
+        "title": "KPI Development",
+        "content": "A KPI is a quantifiable value used in the organization to track and determine the progress of a specific business objective. KPIs allow organizations to evaluate their performance and decide whether to continue with current behaviors or if they need to change strategy."
+      },
+      "8": {
+        "title": "Automation",
+        "content": "Automation involves using technology to perform tasks with very little human intervention. It can be implemented in any sector where repetitive tasks are performed."
+      },
+      "9": {
+        "title": "RPA and Virtual Agents",
+        "content": "We automate processes with intelligent bots and virtual assistants that reduce repetitive tasks and improve operational efficiency through AI and RPA."
+      },
+      "10": {
+        "title": "Cloud Optimization (Azure, GCP, AWS)",
+        "content": "We optimize your cloud environments (Azure, GCP, AWS) to improve performance, security, and reduce costs, applying architecture and FinOps strategies."
+      }
+    }
+  },
+  "about": {
+    "badge": "About Us",
+    "title": "About Us",
+    "intro": "SGS Analytics is a {dataEngineering}, {cloud}, and {ai} company based in Latin America.",
+    "dataEngineering": "data engineering",
+    "cloud": "cloud",
+    "ai": "artificial intelligence",
+    "helpTitle": "We help organizations centralize, analyze, and govern their data through solutions in:",
+    "services": {
+      "dataEngineering": "Data Engineering",
+      "powerBi": "Power BI",
+      "machineLearning": "Machine Learning",
+      "automatizacion": "Automation",
+      "finOps": "Cloud cost optimization (FinOps)"
+    },
+    "teams": "We work with executive, financial, and technology teams to convert data into reliable business decisions.",
+    "certifications": "Certifications",
+    "experience": "Our Experience",
+    "teaser": {
+      "description1": "Certified experts who convert technology into results.",
+      "description2": "Team of expert engineers with more than 40 certifications.",
+      "cta": "Learn more about us"
+    },
+    "cta": {
+      "title": "Want to work with us?",
+      "description": "Learn more about our team and experience. We are ready to help you achieve your goals.",
+      "contact": "Contact Us",
+      "services": "View our services"
+    }
+  },
+  "home": {
+    "services": {
+      "badge": "Our Services",
+      "title": "Services",
+      "description": "Our services will help you increase sales, build customer loyalty, discover star products through data analysis, and gain competitive advantage.",
+      "viewAll": "View all services"
+    }
+  },
+  "aboutServices": {
+    "badge": "Our Services",
+    "title": "Services",
+    "description": "Our services will help you increase sales, build customer loyalty, discover star products through data analysis, gain competitive advantage, in summary Maximize efficiency in data usage"
+  },
+  "generalServices": {
+    "title": "Services",
+    "description": "Discover our solutions focused on understanding your challenges and aligned with your objectives",
+    "items": {
+      "1": "Process Automation",
+      "2": "Advanced Statistics",
+      "3": "Power BI",
+      "4": "Data Centralization",
+      "5": "Data Administration",
+      "6": "Data Warehouse",
+      "7": "Advanced Dashboards",
+      "8": "Plugins and APIs",
+      "9": "Power Apps",
+      "10": "Automatic Alerts",
+      "11": "Data Streaming",
+      "12": "AI Agents",
+      "13": "Cloud Cost Optimization",
+      "14": "Cloud Implementation (AWS, GCP and Azure)",
+      "15": "Machine Learning",
+      "16": "Custom AI"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "We're here to help you. Get in touch with us through any of our available channels.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "messagePlaceholder": "I would like...",
+      "submit": "Send",
+      "submitting": "Sending...",
+      "sendAnother": "Send another message",
+      "success": "Message sent successfully! We will contact you soon.",
+      "error": "Error sending message. Please try again.",
+      "nameRequired": "Name must be at least 2 characters",
+      "emailInvalid": "Please enter a valid email address"
+    },
+    "info": {
+      "location": {
+        "title": "Location",
+        "description": "Our address",
+        "footerText": "Location",
+        "value": "Guatemala City"
+      },
+      "phone": {
+        "title": "Contact information",
+        "description": "You can write or call",
+        "footerText": "Phone"
+      },
+      "support": {
+        "title": "Specialized support",
+        "description": "24/7 Support",
+        "footerText": "Email"
+      }
+    },
+    "cta": {
+      "title": "Ready to transform your business?",
+      "description": "Contact us or schedule an appointment to start your digital transformation today.",
+      "contact": "Contact Us",
+      "schedule": "Schedule an appointment"
+    }
+  },
+  "footer": {
+    "brand": "SGS Analytics",
+    "description": "We drive the digital transformation of companies through AI, automation, cloud, and advanced analytics.",
+    "links": "Links",
+    "contact": "Contact Us",
+    "copyright": "Copyright © 2025 SGS Analytics. All rights reserved."
+  },
+  "common": {
+    "error": {
+      "lottieLoad": "Error loading animation:",
+      "unknown": "Unknown error"
+    }
+  },
+  "metadata": {
+    "title": "Automate - SGS ANALYTICS",
+    "description": "Automate your business with SGS ANALYTICS"
+  }
+}

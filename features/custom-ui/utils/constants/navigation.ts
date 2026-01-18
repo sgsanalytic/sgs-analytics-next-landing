@@ -1,22 +1,22 @@
-export const NAVIGATION_LINKS = [
+export const getNavigationLinks = (t: (key: string) => string) => [
   {
     id: "home",
-    label: "Inicio",
+    label: t("home"),
     href: "/",
   },
   {
     id: "about-us-experience",
-    label: "Sobre nosotros",
+    label: t("aboutUs"),
     href: "/about-us-experience",
   },
   {
     id: "services-consulting",
-    label: "Servicios y Consultoría",
+    label: t("services"),
     href: "/services-consulting",
   },
   {
     id: "contact",
-    label: "Contacto",
+    label: t("contact"),
     href: "/contact",
   },
 ];

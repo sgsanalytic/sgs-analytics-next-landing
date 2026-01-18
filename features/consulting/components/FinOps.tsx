@@ -1,6 +1,8 @@
 import React from "react";
+import { useTranslations } from "next-intl";
 
 export const FinOps = () => {
+  const t = useTranslations('consulting.finOps');
   return (
     <section className="py-12 md:py-20 bg-background text-foreground">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -8,13 +10,13 @@ export const FinOps = () => {
           <div className="flex items-center justify-center gap-3 mb-4 md:mb-6">
             <div className="h-1 w-12 bg-primary rounded-full" />
             <span className="text-sm md:text-base font-medium text-primary uppercase tracking-wider">
-              Cloud y FinOps
+              {t('badge')}
             </span>
             <div className="h-1 w-12 bg-primary rounded-full" />
           </div>
           
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6">
-            Optimización de Costos en la Nube
+            {t('title')}
           </h2>
           
           {/* Highlighted Stat */}
@@ -24,18 +26,20 @@ export const FinOps = () => {
                 20-40%
               </span>
               <span className="text-base md:text-lg text-muted-foreground mt-2">
-                de reducción en costos cloud
+                {t('reduction')}
               </span>
             </div>
           </div>
           
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-8">
-            A través de prácticas de <span className="text-primary font-semibold">FinOps</span> y nuestra experiencia en la nube, ayudamos a las empresas a optimizar sus costos mediante visibilidad, control y predicción del gasto cloud.
+            {t.rich('description', {
+              finops: (chunks) => <span className="text-primary font-semibold">{chunks}</span>
+            })}
           </p>
 
           {/* Cloud Providers */}
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <span className="text-sm text-muted-foreground">Plataformas:</span>
+            <span className="text-sm text-muted-foreground">{t('platforms')}</span>
             <div className="flex gap-3">
               <span className="px-5 py-2.5 text-sm font-bold bg-[#FF9900]/10 text-[#FF9900] rounded-lg border border-[#FF9900]/20">
                 AWS

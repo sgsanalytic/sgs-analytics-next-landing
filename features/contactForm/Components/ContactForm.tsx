@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { useTranslations } from "next-intl";
 import {
   Form,
   FormControl,
@@ -17,6 +18,7 @@ import { Loader2, CheckCircle, AlertCircle } from "lucide-react";
 import { useContactForm, MESSAGE_MAX_LENGTH } from "../hooks/useContactForm";
 
 export const ContactForm = () => {
+  const t = useTranslations('contact.form');
   const { form, onSubmit, isLoading, isSuccess, isError, error, reset } =
     useContactForm();
 
@@ -26,8 +28,7 @@ export const ContactForm = () => {
         <Alert className="mb-6 border-success/50 bg-success/10">
           <CheckCircle className="h-4 w-4 text-success" />
           <AlertDescription className="text-success">
-            ¡Mensaje enviado exitosamente! Nos pondremos en contacto contigo
-            pronto.
+            {t('success')}
           </AlertDescription>
         </Alert>
       )}
@@ -36,7 +37,7 @@ export const ContactForm = () => {
         <Alert className="mb-6 border-destructive/50 bg-destructive/10">
           <AlertCircle className="h-4 w-4 text-destructive" />
           <AlertDescription className="text-destructive">
-            {error?.message || "Error al enviar el mensaje. Intenta de nuevo."}
+            {error?.message || t('error')}
           </AlertDescription>
         </Alert>
       )}
@@ -48,7 +49,7 @@ export const ContactForm = () => {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Nombre</FormLabel>
+                <FormLabel>{t('name')}</FormLabel>
                 <FormControl>
                   <Input
                     placeholder="John Doe"
@@ -65,7 +66,7 @@ export const ContactForm = () => {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Correo electrónico</FormLabel>
+                <FormLabel>{t('email')}</FormLabel>
                 <FormControl>
                   <Input
                     placeholder="john.doe@example.com"
@@ -88,10 +89,10 @@ export const ContactForm = () => {
 
               return (
                 <FormItem>
-                  <FormLabel>Mensaje</FormLabel>
+                  <FormLabel>{t('message')}</FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder="Me gustaría..."
+                      placeholder={t('messagePlaceholder')}
                       disabled={isLoading}
                       {...field}
                     />
@@ -117,11 +118,11 @@ export const ContactForm = () => {
           <div className="flex gap-4">
             <Button type="submit" disabled={isLoading}>
               {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-              {isLoading ? "Enviando..." : "Enviar"}
+              {isLoading ? t('submitting') : t('submit')}
             </Button>
             {isSuccess && (
               <Button type="button" variant="outline" onClick={() => reset()}>
-                Enviar otro mensaje
+                {t('sendAnother')}
               </Button>
             )}
           </div>

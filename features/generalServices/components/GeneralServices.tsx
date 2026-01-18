@@ -1,8 +1,12 @@
+import { useTranslations } from "next-intl";
 import { Check } from "lucide-react";
-import { GENERAL_SERVICES_ITEMS } from "../utils/constant";
+import { getGeneralServicesItems } from "../utils/constant/genealServices.constants";
 import { LottieHighTech } from "@/features/lotties/components/LottieHighTech";
 
 export const GeneralServices = () => {
+  const t = useTranslations('generalServices');
+  const generalServicesItems = getGeneralServicesItems(t);
+  
   return (
     <section className="py-4 sm:py-6 lg:py-8 bg-background text-foreground container mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 lg:items-center">
@@ -13,14 +17,13 @@ export const GeneralServices = () => {
         </article>
         <article className="space-y-4 sm:space-y-6 content-center order-1 lg:order-2">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight">
-            Servicios
+            {t('title')}
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-            Conoce nuestros soluciones enfocadas al entendimiento de sus
-            problemáticas y aliniadas a sus objetivos
+            {t('description')}
           </p>
           <ul className="space-y-2 sm:space-y-3 list-none">
-            {GENERAL_SERVICES_ITEMS.map((item) => (
+            {generalServicesItems.map((item) => (
               <li
                 key={item.id}
                 className="flex items-center gap-2 sm:gap-3 text-sm sm:text-base text-foreground transition-colors hover:text-primary group"

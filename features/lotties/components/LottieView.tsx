@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { useTranslations } from "next-intl";
 import { useLottie } from "lottie-react";
 import { Loader2 } from "lucide-react";
 
@@ -36,8 +37,8 @@ export const LottieView = ({
         className={`flex items-center justify-center text-muted-foreground w-full h-full ${className}`}
       >
         <p>
-          Error al cargar la animación:{" "}
-          {error instanceof Error ? error.message : "Error desconocido"}
+          {t('lottieLoad')}{" "}
+          {error instanceof Error ? error.message : t('unknown')}
         </p>
       </div>
     );
