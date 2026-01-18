@@ -19,6 +19,7 @@ export const LottieView = ({
   className = "",
   ...props
 }: LottieViewProps) => {
+  const t = useTranslations('common.error');
   const { View } = useLottie(
     {
       animationData: animationData || {},
