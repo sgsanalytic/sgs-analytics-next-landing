@@ -151,7 +151,7 @@
   "about": {
     "badge": "About Us",
     "title": "About Us",
-    "intro": "SGS Analytics is a {dataEngineering}, {cloud}, and {ai} company based in Latin America.",
+    "intro": "SGS Analytics is a <dataEngineering>data engineering</dataEngineering>, <cloud>cloud</cloud>, and <ai>artificial intelligence</ai> company based in Latin America.",
     "dataEngineering": "data engineering",
     "cloud": "cloud",
     "ai": "artificial intelligence",

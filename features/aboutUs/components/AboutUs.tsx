@@ -31,7 +31,11 @@ export const AboutUs = ({ certifications, experiences }: AboutUsProps) => {
           <div className="space-y-6 md:space-y-8 max-w-3xl">
             <div className="space-y-3">
               <p className="text-lg sm:text-xl md:text-2xl text-foreground leading-relaxed font-medium">
-                SGS Analytics es una empresa de <span className="text-primary">{t('dataEngineering')}</span>, <span className="text-primary">{t('cloud')}</span> e <span className="text-primary">{t('ai')}</span> con sede en Latinoamérica.
+                {t.rich('intro', {
+                  dataEngineering: (chunks) => <span className="text-primary">{chunks}</span>,
+                  cloud: (chunks) => <span className="text-primary">{chunks}</span>,
+                  ai: (chunks) => <span className="text-primary">{chunks}</span>
+                })}
               </p>
             </div>
 
