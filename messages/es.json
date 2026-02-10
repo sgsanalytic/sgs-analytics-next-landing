@@ -9,9 +9,20 @@
     "brand": "SGS Analytics"
   },
   "hero": {
-    "title": "Empresa de Ingeniería de Datos, Cloud e Inteligencia Artificial en Latinoamérica",
-    "description": "En SGS Analytics ayudamos a empresas medianas y corporativas a diseñar plataformas de datos, dashboards ejecutivos, modelos predictivos y optimizar costos en la nube mediante prácticas de FinOps.",
-    "contactButton": "Contáctanos"
+    "title": "Construye Rápido. Opera Inteligente. Con un Equipo Senior Nearshore.",
+    "description": "Entregamos soluciones de Cloud/DevOps, desarrollo de software y Data/AI de principio a fin diseñadas para confiabilidad, seguridad y ROI medible.",
+    "contactButton": "Contáctanos",
+    "bullets": {
+      "usHours": "Horario compatible con EE.UU.",
+      "seniorLed": "Liderazgo senior",
+      "cloudSoftware": "Cloud • Software • Data/AI",
+      "mobileApp": "Desarrollo de Apps Móviles"
+    },
+    "video": {
+      "title": "Mira Nuestro Pitch",
+      "placeholder": "Video próximamente",
+      "comingSoon": "Nuestro video de presentación estará disponible aquí pronto"
+    }
   },
   "services": {
     "title": "Ingeniería de Datos y Analítica",
