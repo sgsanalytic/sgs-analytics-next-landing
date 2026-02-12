@@ -1,4 +1,11 @@
 {
+  "trustedByProof": {
+    "metrics": {
+      "projects": "Proyectos entregados",
+      "industries": "Industrias atendidas",
+      "consultants": "Consultores senior"
+    }
+  },
   "navigation": {
     "home": "Inicio",
     "aboutUs": "Sobre nosotros",

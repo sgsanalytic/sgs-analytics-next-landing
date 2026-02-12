@@ -10,6 +10,7 @@ import {
   mapCertificationsToComponent,
   mapExperiencesToComponent,
 } from "@/features/aboutUs/utils/mappers/aboutUs.mappers";
+import { TrustedByProof } from "@/features/TrustedByProof/components";
 
 // Revalidar los datos cada 3 minutos (180 segundos)
 export const revalidate = 180;
@@ -30,6 +31,9 @@ export default async function Home() {
       <main className="pt-16">
         {/* Hero Section */}
         <BasicHero />
+
+        {/* Trusted by / Proof*/}
+        <TrustedByProof />
 
         {/* Certifications and Experience Carousels */}
         <section className="py-16 md:py-24 bg-background text-foreground">
