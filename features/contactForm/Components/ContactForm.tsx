@@ -16,6 +16,7 @@ import { Card } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Loader2, CheckCircle, AlertCircle } from "lucide-react";
 import { useContactForm, MESSAGE_MAX_LENGTH } from "../hooks/useContactForm";
+import styles from "./btnContact.module.css";
 
 export const ContactForm = () => {
   const t = useTranslations('contact.form');
@@ -116,10 +117,14 @@ export const ContactForm = () => {
             }}
           />
           <div className="flex gap-4">
-            <Button type="submit" disabled={isLoading}>
-              {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+            <button
+              type="submit"
+              disabled={isLoading}
+              className={styles.btnGlow}
+            >
+              {isLoading && <Loader2 className="h-4 w-4 animate-spin shrink-0" />}
               {isLoading ? t('submitting') : t('submit')}
-            </Button>
+            </button>
             {isSuccess && (
               <Button type="button" variant="outline" onClick={() => reset()}>
                 {t('sendAnother')}
