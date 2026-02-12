@@ -11,6 +11,7 @@ import {
   mapExperiencesToComponent,
 } from "@/features/aboutUs/utils/mappers/aboutUs.mappers";
 import { TrustedByProof } from "@/features/TrustedByProof/components";
+import { LeadershipAndDeliveryTeam } from "@/features/LeadershipAndDeliveryTeam/components";
 
 // Revalidar los datos cada 3 minutos (180 segundos)
 export const revalidate = 180;
@@ -44,7 +45,8 @@ export default async function Home() {
             />
           </div>
         </section>
-
+        {/* Leadership & Delivery Team */}
+        <LeadershipAndDeliveryTeam />
         {/* Consulting Hero */}
         <Consulting />
 

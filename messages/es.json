@@ -6,6 +6,56 @@
       "consultants": "Consultores senior"
     }
   },
+  "leadership": {
+    "badge": "Equipo",
+    "title": "Leadership & Delivery Team",
+    "cta": "Contáctanos",
+    "usClientsRemote": "Clientes US / entrega remota",
+    "skills": "Skills",
+    "certifications": "Certificaciones",
+    "focus": "Enfoque",
+    "english": "Inglés",
+    "stack": "Stack técnico",
+    "team": {
+      "julio": {
+        "role": "CEO",
+        "focus": "Comercial y estrategia",
+        "skills": { "0": "Desarrollo de negocio", "1": "Alianzas estratégicas", "2": "Go-to-market" },
+        "certifications": "MBA, 15+ años en tech"
+      },
+      "hugo": {
+        "role": "Lead Data/AI Engineer",
+        "focus": "Arquitectura de datos, ML y IA",
+        "skills": { "0": "Python • TensorFlow • PyTorch", "1": "Databricks • Spark • dbt", "2": "AWS • Azure • MLOps" },
+        "certifications": "AWS Solutions Architect, Azure Data Engineer",
+        "stack": "Python, TensorFlow, PyTorch, Databricks, Spark, dbt, AWS, Azure"
+      },
+      "maria": {
+        "role": "Data Engineer",
+        "focus": "Pipelines ETL y data warehousing",
+        "skills": { "0": "ETL/ELT", "1": "SQL • dbt", "2": "Azure Data Factory" },
+        "certifications": "Azure Data Engineer Associate"
+      },
+      "carlos": {
+        "role": "Cloud Engineer",
+        "focus": "Infraestructura y DevOps",
+        "skills": { "0": "AWS • Terraform", "1": "Kubernetes • Docker", "2": "CI/CD" },
+        "certifications": "AWS Solutions Architect, Azure Administrator"
+      },
+      "ana": {
+        "role": "BI Analyst",
+        "focus": "Dashboards y reporting",
+        "skills": { "0": "Power BI • Tableau", "1": "DAX • SQL", "2": "Data modeling" },
+        "certifications": "Microsoft Power BI Certified"
+      },
+      "diego": {
+        "role": "ML Engineer",
+        "focus": "Modelos predictivos y MLOps",
+        "skills": { "0": "Python • Scikit-learn", "1": "MLOps • Feature Store", "2": "Azure ML" },
+        "certifications": "AWS ML Specialty"
+      }
+    }
+  },
   "navigation": {
     "home": "Inicio",
     "aboutUs": "Sobre nosotros",
