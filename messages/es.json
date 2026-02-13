@@ -329,6 +329,47 @@
     "contact": "Contáctanos",
     "copyright": "Copyright © 2025 SGS Analytics. Todos los derechos reservados."
   },
+  "caseStudies": {
+    "badge": "Casos de éxito",
+    "title": "Case Studies",
+    "description": "Problema, enfoque técnico y resultados en proyectos reales. Duración y tamaño del equipo incluidos.",
+    "labels": {
+      "problem": "Problema",
+      "approach": "Enfoque técnico",
+      "result": "Resultado",
+      "duration": "Duración",
+      "team": "Equipo"
+    },
+    "cases": {
+      "retail-analytics": {
+        "title": "Retail: visibilidad en tiempo real",
+        "industry": "Retail",
+        "problem": "Cadena de retail sin visibilidad unificada de ventas ni inventarios en tiempo real. Reportes manuales y desincronizados entre tiendas y central.",
+        "approach": "Pipeline de datos en cloud (AWS), dashboards en tiempo real con Power BI y pronóstico de demanda con modelos de ML.",
+        "result": "Reducción de ~40% en tiempo de generación de reportes; mejora significativa en disponibilidad de producto en tienda.",
+        "duration": "4-6 meses",
+        "teamSize": "3-5 personas"
+      },
+      "fintech-data-platform": {
+        "title": "Fintech: una sola fuente de verdad",
+        "industry": "Fintech",
+        "problem": "Múltiples fuentes de datos sin unificar, reporting manual y lento. Equipos de negocio y riesgo sin métricas alineadas.",
+        "approach": "Data lake en AWS, ETL con dbt, modelado dimensional y Power BI como capa de visualización y reportes embebidos.",
+        "result": "Un solo source of truth; reportes que antes tomaban días disponibles en minutos. ~30% menos tiempo en análisis operativo.",
+        "duration": "5-7 meses",
+        "teamSize": "4-6 personas"
+      },
+      "telecom-cost-optimization": {
+        "title": "Telecom: control de costos cloud",
+        "industry": "Telecom",
+        "problem": "Costos de infraestructura cloud sin control centralizado y facturación fragmentada por equipos y proyectos.",
+        "approach": "Gobernanza con tagging, prácticas FinOps, dashboards de costos por cuenta y servicio, y optimización de recursos (rightsizing).",
+        "result": "Ahorro estimado de 20-25% en costos cloud; visibilidad total por área y proyecto.",
+        "duration": "2-4 meses",
+        "teamSize": "2-4 personas"
+      }
+    }
+  },
   "common": {
     "error": {
       "lottieLoad": "Error al cargar la animación:",

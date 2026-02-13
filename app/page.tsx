@@ -12,6 +12,7 @@ import {
 } from "@/features/aboutUs/utils/mappers/aboutUs.mappers";
 import { TrustedByProof } from "@/features/TrustedByProof/components";
 import { LeadershipAndDeliveryTeam } from "@/features/LeadershipAndDeliveryTeam/components";
+import { CaseStudies } from "@/features/CaseStudies/components";
 
 // Revalidar los datos cada 3 minutos (180 segundos)
 export const revalidate = 180;
@@ -47,6 +48,8 @@ export default async function Home() {
         </section>
         {/* Leadership & Delivery Team */}
         <LeadershipAndDeliveryTeam />
+        {/* case studies */}
+        <CaseStudies />
         {/* Consulting Hero */}
         <Consulting />
 

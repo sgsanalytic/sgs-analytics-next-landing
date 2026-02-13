@@ -329,6 +329,47 @@
     "contact": "Contact Us",
     "copyright": "Copyright © 2025 SGS Analytics. All rights reserved."
   },
+  "caseStudies": {
+    "badge": "Success stories",
+    "title": "Case Studies",
+    "description": "Problem, technical approach, and results in real projects. Duration and team size included.",
+    "labels": {
+      "problem": "Problem",
+      "approach": "Technical approach",
+      "result": "Result",
+      "duration": "Duration",
+      "team": "Team"
+    },
+    "cases": {
+      "retail-analytics": {
+        "title": "Retail: real-time visibility",
+        "industry": "Retail",
+        "problem": "Retail chain with no unified visibility of sales or inventory in real time. Manual, out-of-sync reporting between stores and HQ.",
+        "approach": "Cloud data pipeline (AWS), real-time dashboards with Power BI, and demand forecasting with ML models.",
+        "result": "~40% reduction in report generation time; significant improvement in in-store product availability.",
+        "duration": "4-6 months",
+        "teamSize": "3-5 people"
+      },
+      "fintech-data-platform": {
+        "title": "Fintech: single source of truth",
+        "industry": "Fintech",
+        "problem": "Multiple ununified data sources, manual and slow reporting. Business and risk teams with misaligned metrics.",
+        "approach": "Data lake on AWS, ETL with dbt, dimensional modeling, and Power BI as visualization and embedded reporting layer.",
+        "result": "Single source of truth; reports that used to take days available in minutes. ~30% less time on operational analysis.",
+        "duration": "5-7 months",
+        "teamSize": "4-6 people"
+      },
+      "telecom-cost-optimization": {
+        "title": "Telecom: cloud cost control",
+        "industry": "Telecom",
+        "problem": "Cloud infrastructure costs with no central control and fragmented billing across teams and projects.",
+        "approach": "Governance with tagging, FinOps practices, cost dashboards by account and service, and resource optimization (rightsizing).",
+        "result": "Estimated 20-25% savings on cloud costs; full visibility by area and project.",
+        "duration": "2-4 months",
+        "teamSize": "2-4 people"
+      }
+    }
+  },
   "common": {
     "error": {
       "lottieLoad": "Error loading animation:",
