@@ -3,6 +3,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
 import { z } from "zod";
 import { sendMessageService } from "../services/sendMessage.services";
+import type { ISendServicesBody } from "../interfaces/sendServices.interfaces";
 
 export const MESSAGE_MIN_LENGTH = 10;
 export const MESSAGE_MAX_LENGTH = 500;
@@ -10,6 +11,9 @@ export const MESSAGE_MAX_LENGTH = 500;
 const contactFormSchema = z.object({
   name: z.string().min(2, "El nombre debe tener al menos 2 caracteres").max(50),
   email: z.string().email("Ingresa un correo electrónico válido"),
+  company: z.string().max(100),
+  role: z.string().max(100),
+  topic: z.string(),
   message: z
     .string()
     .min(
@@ -30,6 +34,9 @@ export const useContactForm = () => {
     defaultValues: {
       name: "",
       email: "",
+      company: "",
+      role: "",
+      topic: "",
       message: "",
     },
     mode: "onChange",
@@ -43,7 +50,15 @@ export const useContactForm = () => {
   });
 
   const onSubmit = (values: ContactFormValues) => {
-    mutation.mutate(values);
+    const body: ISendServicesBody = {
+      name: values.name,
+      email: values.email,
+      message: values.message,
+      ...(values.company?.trim() && { company: values.company.trim() }),
+      ...(values.role?.trim() && { role: values.role.trim() }),
+      ...(values.topic?.trim() && { topic: values.topic.trim() }),
+    };
+    mutation.mutate(body);
   };
 
   return {

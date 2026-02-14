@@ -285,8 +285,16 @@
     "title": "Contact Us",
     "description": "We're here to help you. Get in touch with us through any of our available channels.",
     "form": {
+      "formTitle": "Book a 15-min discovery call",
+      "formSubtitle": "Tell us what you're building—Cloud, Software, or Data/AI. We'll reply within 24 hours (US hours).",
       "name": "Name",
       "email": "Email",
+      "company": "Company",
+      "companyPlaceholder": "e.g. Acme Inc.",
+      "role": "Role / Title",
+      "rolePlaceholder": "e.g. Head of Operations",
+      "topic": "What do you need?",
+      "topicPlaceholder": "Select an option",
       "message": "Message",
       "messagePlaceholder": "I would like...",
       "submit": "Send",
@@ -295,7 +303,8 @@
       "success": "Message sent successfully! We will contact you soon.",
       "error": "Error sending message. Please try again.",
       "nameRequired": "Name must be at least 2 characters",
-      "emailInvalid": "Please enter a valid email address"
+      "emailInvalid": "Please enter a valid email address",
+      "topicsLoading": "Loading options..."
     },
     "info": {
       "location": {

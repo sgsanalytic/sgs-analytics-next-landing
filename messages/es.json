@@ -285,8 +285,16 @@
     "title": "Contáctanos",
     "description": "Estamos aquí para ayudarte. Ponte en contacto con nosotros a través de cualquiera de nuestros canales disponibles.",
     "form": {
+      "formTitle": "Reserva una llamada de descubrimiento de 15 min",
+      "formSubtitle": "Cuéntanos qué estás construyendo—Cloud, Software o Data/AI. Responderemos en 24 horas (horario US).",
       "name": "Nombre",
       "email": "Correo electrónico",
+      "company": "Empresa",
+      "companyPlaceholder": "Ej. Mi Empresa S.L.",
+      "role": "Rol / Cargo",
+      "rolePlaceholder": "Ej. Director de Operaciones",
+      "topic": "¿Qué necesitas?",
+      "topicPlaceholder": "Selecciona una opción",
       "message": "Mensaje",
       "messagePlaceholder": "Me gustaría...",
       "submit": "Enviar",
@@ -295,7 +303,8 @@
       "success": "¡Mensaje enviado exitosamente! Nos pondremos en contacto contigo pronto.",
       "error": "Error al enviar el mensaje. Intenta de nuevo.",
       "nameRequired": "El nombre debe tener al menos 2 caracteres",
-      "emailInvalid": "Ingresa un correo electrónico válido"
+      "emailInvalid": "Ingresa un correo electrónico válido",
+      "topicsLoading": "Cargando opciones..."
     },
     "info": {
       "location": {
